@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4ae9a6;
+  border: 0px none #d9d9d9;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #061e13;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #051e13;
+  color: #fff;
+  width: fit-content;
+  border: 3px solid #fff2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  align-items: center;
+  width: 600px;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+#dolar-info {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: normal;
+  justify-content: space-around;
+  gap: 16px;
+  width: 100%;
+  min-height: 530px;
+}
+.dolarDiv {
+  width: 42%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border-radius: 20px;
+  gap: 10px 0px;
+  background: #fff2;
+  min-height: 126px;
+}
+.dolarDiv h3 {
+  width: 100%;
+  margin: 0;
+  padding: 3px;
+  font-size: 17px;
+  background: #fff3;
+  border-radius: 10px;
+  height: fit-content;
+}
+.dolarDiv > :is(.compra, .venta) {
+  width: 50%;
+  gap: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dolarDiv span {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 200;
+}
+.variacion p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 300;
+}
+.variacion span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.variacion :is(p, span) {
+  color: #0008;
+}
+.variacion {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 10px;
+  justify-content: center;
+  align-self: center;
+}
+.negativo {
+  background: #f88279;
+}
+.positivo {
+  background: #83e0b9;
+}
+#actualizacion {
+  margin-top: 20px;
+  font-weight: 300;
+}
+button#botonActualizar {
+  margin-top: 20px;
+  background: #4ae9a6;
+  color: #061e13;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.blueDiv {
+  background: #2196f366;
+}
+.skeletonDiv {
+  width: 48%;
+  height: 166px;
+  background: #d0d0d0;
+  position: relative;
+  display: flex;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ccca 40%, #fffa, #ccca 60%) right/300%
+    100%;
+  animation: skeleton 1s linear infinite;
+}
+
+.skeletonTimeDiv {
+  margin-top: 0px;
+  height: 24px;
+  background: #cccccc;
+  width: 100%;
+  min-width: 260px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #ccca 40%, #fffa, #ccca 60%) right/300%
+    100%;
+  animation: skeleton 1s linear infinite;
+}
+@keyframes skeleton {
+  to {
+    background-position: left;
+  }
+}
