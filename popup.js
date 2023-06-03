@@ -37,7 +37,7 @@ const getDataDolar = async () => {
           infoElement.classList.add("blueDiv");
         }
         infoElement.innerHTML = `
-        <h3>${nombre}</h3>
+        <h3>${nombre.includes("Liqui") ? "Dolar Liqui" : nombre}</h3>
         <div class="compra">
           <span>Compra:</span>
           ${compra === "No Cotiza" ? compra : "$" + compra}
