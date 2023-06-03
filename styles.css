@@ -1,6 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
-* {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none !important;
+}
+html,
+#root,
+body,
+.App {
+  position: relative;
+}
+
+html {
+  line-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 100% 16px;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
 }
 
 ::-webkit-scrollbar {
@@ -52,43 +86,39 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 1200px;
-}
-.side {
   height: 100%;
-  width: 10%;
+  overflow: hidden;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(600px, 70%, 800px);
+  width: clamp(600px, 100%, 800px);
   padding: 20px;
   border: 3px solid #fff2;
 }
 footer {
   margin: 20px 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: clamp(600px, 70%, 800px);
 }
-@media (width <= 821px) {
+@media (max-width: 821px) {
   .container,
   footer {
     width: clamp(300px, 98%, 600px);
-  }
-  .side {
-    display: none;
+    padding: 20px 10px;
   }
 }
-@media (width <= 401px) {
+@media (max-width: 668px) {
   .container,
   footer {
     width: 100%;
   }
 }
-
 h3 {
   font-size: 17px;
   margin-bottom: 5px;
@@ -118,14 +148,14 @@ p {
   width: 100%;
   min-height: 530px;
 }
-@media (width <= 821px) {
+@media (max-width: 821px) {
   #dolar-info {
     flex-wrap: wrap;
     gap: 15px 5px;
   }
 }
 .dolarDiv {
-  width: 42%;
+  width: 43%;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -135,12 +165,13 @@ p {
   background: #fff2;
   min-height: 126px;
 }
-@media (width <= 821px) {
+@media (max-width: 821px) {
   .dolarDiv {
-    width: 48%;
+    width: 47%;
+    padding: 15px;
   }
 }
-@media (width <= 401px) {
+@media (max-width: 389px) {
   .dolarDiv {
     width: 100%;
   }
@@ -224,12 +255,12 @@ button#botonActualizar {
     100%;
   animation: skeleton 1s linear infinite;
 }
-@media (width <= 821px) {
+@media (max-width: 821px) {
   .skeletonDiv {
     width: 48%;
   }
 }
-@media (width <= 401px) {
+@media (max-width: 389px) {
   .skeletonDiv {
     width: 100%;
   }
@@ -255,6 +286,7 @@ button#botonActualizar {
 footer p {
   text-align: center;
   font-size: 11px;
+  width: 100%;
 }
 footer a {
   font-size: 11px;
