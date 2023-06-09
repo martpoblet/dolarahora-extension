@@ -208,7 +208,8 @@ p {
   font-weight: 500;
 }
 .variacion :is(p, span) {
-  color: #0008;
+  color: #000000d4;
+  font-weight: 400;
 }
 .variacion {
   display: flex;
@@ -245,8 +246,8 @@ button#botonActualizar {
   background: #2196f366;
 }
 .skeletonDiv {
-  width: 48%;
-  height: 166px;
+  width: 44%;
+  height: 157px;
   background: #d0d0d0;
   position: relative;
   display: flex;
@@ -258,11 +259,13 @@ button#botonActualizar {
 @media (max-width: 821px) {
   .skeletonDiv {
     width: 48%;
+    height: 152px;
   }
 }
 @media (max-width: 389px) {
   .skeletonDiv {
     width: 100%;
+    height: 122px;
   }
 }
 
