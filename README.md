@@ -27,5 +27,5 @@ Dolar Ahora es desarrollado por Martín Poblet.
 
 ## Licencia
 
-Este proyecto está bajo la Licencia [Nombre de la licencia] - consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
 
