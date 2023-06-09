@@ -1,6 +1,6 @@
 # Dolar Ahora
 
-![Dolar Ahora Logo](./public/assets/dolarahora.svg = 250x)
+![Dolar Ahora Logo](./public/assets/dolarahora.svg)
 
 Dolar Ahora es una extensión de Chrome que te brinda información actualizada sobre la cotización del dólar en Argentina. Con esta extensión, podrás acceder a los valores del dólar oficial, dólar blue y otros tipos de cambio relevantes en tiempo real. Mantente informado y toma decisiones informadas sobre tus transacciones y finanzas.
 
