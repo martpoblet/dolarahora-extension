@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Dolar Ahora - Valores del Dolar al instante",
   "version": "1.0",
-  "description": "¡No te quedes colgado con el dólar! Con Dolar Ahora, tenés toda la data en tiempo real para saber cómo viene el billete verde. Enterate de las cotizaciones actualizadas al toque y sacale el jugo a tus inversiones y ahorros.",
+  "description": "Datos del dólar en tiempo real en un solo click",
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
