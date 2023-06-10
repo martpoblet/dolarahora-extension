@@ -83,6 +83,11 @@ body {
   margin: 0;
   min-width: 440px;
 }
+@media (max-width: 389px) {
+  body {
+    min-width: 100%;
+  }
+}
 main {
   display: flex;
   justify-content: center;

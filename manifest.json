@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Dolar Ahora - Valores del Dolar al instante",
   "version": "1.0",
   "description": "Datos del dólar en tiempo real en un solo click",
