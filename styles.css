@@ -83,11 +83,7 @@ body {
   margin: 0;
   min-width: 440px;
 }
-@media (max-width: 389px) {
-  body {
-    min-width: 100%;
-  }
-}
+
 main {
   display: flex;
   justify-content: center;
@@ -100,7 +96,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(600px, 100%, 800px);
+  width: 100%;
   padding: 20px;
   border: 3px solid #fff2;
 }
@@ -110,21 +106,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(600px, 70%, 800px);
+  width: 100%;
 }
-@media (max-width: 821px) {
-  .container,
-  footer {
-    width: clamp(300px, 98%, 600px);
-    padding: 20px 10px;
-  }
-}
-@media (max-width: 668px) {
-  .container,
-  footer {
-    width: 100%;
-  }
-}
+
 h3 {
   font-size: 17px;
   margin-bottom: 5px;
@@ -153,14 +137,9 @@ p {
   gap: 16px;
   width: 100%;
 }
-@media (max-width: 821px) {
-  #dolar-info {
-    flex-wrap: wrap;
-    gap: 15px 5px;
-  }
-}
+
 .dolarDiv {
-  width: 43%;
+  width: calc(50% - 8px);
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -169,18 +148,6 @@ p {
   gap: 10px 0px;
   background: #fff2;
   min-height: 157px;
-}
-@media (max-width: 821px) {
-  .dolarDiv {
-    width: 47%;
-    padding: 15px;
-  }
-}
-@media (max-width: 389px) {
-  .dolarDiv {
-    width: 100%;
-    min-height: 127px;
-  }
 }
 .dolarDiv h3 {
   width: 100%;
@@ -252,8 +219,8 @@ button#botonActualizar {
   background: #2196f366;
 }
 .skeletonDiv {
-  width: 44%;
-  height: 154px;
+  width: calc(50% - 8px);
+  height: 157px;
   background: #d0d0d0;
   position: relative;
   display: flex;
@@ -262,24 +229,13 @@ button#botonActualizar {
     100%;
   animation: skeleton 1s linear infinite;
 }
-@media (max-width: 821px) {
-  .skeletonDiv {
-    width: 48%;
-  }
-}
-@media (max-width: 389px) {
-  .skeletonDiv {
-    width: 100%;
-    height: 126px;
-  }
-}
 
 .skeletonTimeDiv {
   margin-top: 0px;
-  height: 24px;
+  height: 20px;
   background: #cccccc;
   width: 100%;
-  min-width: 260px;
+  min-width: 220px;
   border-radius: 7px;
   background: linear-gradient(90deg, #ccca 40%, #fffa, #ccca 60%) right/300%
     100%;
