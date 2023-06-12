@@ -16,7 +16,6 @@
       "128": "icon128.png"
     }
   },
-  "permissions": ["storage", "activeTab"],
   "host_permissions": ["https://api.dolarsi.com/api/api.php"],
   "web_accessible_resources": [
     {
