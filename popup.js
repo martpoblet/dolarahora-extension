@@ -49,11 +49,15 @@ const getDataDolar = async () => {
         ${
           variacion
             ? ` <div class="${
-                variacion.startsWith("-")
-                  ? "negativo variacion"
+                typeof variacion !== "object"
+                  ? variacion.startsWith("-")
+                    ? "negativo variacion"
+                    : "positivo variacion"
                   : "positivo variacion"
               }">
-              <p>Variación:</p><span>${variacion}</span>
+              <p>Variación:</p><span>${
+                typeof variacion !== "object" ? variacion : "-"
+              }</span>
             </div>`
             : ""
         }`;
