@@ -17,19 +17,36 @@ const skeletonDiv = () => {
 skeletonDiv();
 
 const getDataDolar = async () => {
-  fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
+  fetch("https://dolarapi.com/v1/dolares")
     .then((response) => response.json())
     .then((data) => {
+      const infoDolar = data.filter((item) => item.venta !== "0");
+      console.log(infoDolar);
       dolarInfoElement.innerHTML = "";
-      const infoDolar = data
-        .filter((item) => item.casa.nombre.startsWith("Dolar"))
-        .filter((item) => item.casa.venta !== "0");
 
       infoDolar.forEach((info) => {
-        const compra = info.casa.compra;
-        const venta = info.casa.venta;
-        const nombre = info.casa.nombre;
-        const variacion = info.casa?.variacion;
+        console.log(info);
+        const compra = info.compra;
+        const venta = info.venta;
+        const nombre = info.nombre;
+        const fechaActualizacion = new Date(info.fechaActualizacion);
+        const opcionesDeFormato = {
+          year: "numeric",
+          month: "numeric", // Puedes cambiar a 'short' o 'numeric' si prefieres
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+          timeZoneName: "short",
+          hour12: false, // 24 horas
+          timeZone: "America/Argentina/Buenos_Aires", // Zona horaria de Argentina
+        };
+        const formatoEsAR = new Intl.DateTimeFormat(
+          "es-AR",
+          opcionesDeFormato
+        ).format(fechaActualizacion);
+
+        /* const variacion = info.casa?.variacion; */
 
         const infoElement = document.createElement("div");
         infoElement.classList.add("dolarDiv");
@@ -46,6 +63,13 @@ const getDataDolar = async () => {
           <span>Venta:</span>
           $${venta}
         </div>
+        <div class="positivo variacion">
+            <p>Última actualización</p>
+            <span>${formatoEsAR}</span>
+            </div>
+        `;
+        /*
+        Add Variation for next
         ${
           variacion
             ? ` <div class="${
@@ -59,8 +83,7 @@ const getDataDolar = async () => {
                 typeof variacion !== "object" ? variacion : "-"
               }</span>
             </div>`
-            : ""
-        }`;
+            : "" }*/
 
         dolarInfoElement.appendChild(infoElement);
       });
