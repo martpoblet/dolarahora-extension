@@ -64,7 +64,6 @@ const getDataDolar = async () => {
           $${venta}
         </div>
         <div class="positivo variacion">
-            <p>Última actualización</p>
             <span>${formatoEsAR}</span>
             </div>
         `;
